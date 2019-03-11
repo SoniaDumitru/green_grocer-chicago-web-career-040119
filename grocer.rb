@@ -1,6 +1,5 @@
 def consolidate_cart(cart)
-  new_hash = {};
-  count = 0;
+  new_hash = {}
   cart.each do |item|
     item.each do |name, info|
       if new_hash[name].nil?
