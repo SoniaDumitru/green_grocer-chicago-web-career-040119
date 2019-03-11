@@ -21,7 +21,7 @@ def apply_coupons(cart, coupons)
       if new_hash["#{name} W/COUPON"]
         new_hash["#{name} W/COUPON"][:count] += 1
       else
-        new_hash["#{name} W/COUPON"] = {:price => coupon[:cost], [:clearance] => info[:clearance], :count => 1}
+        new_hash["#{name} W/COUPON"] = {:price => coupon[:cost], :clearance => info[:clearance], :count => 1}
       end
     end
   end
