@@ -1,5 +1,16 @@
 def consolidate_cart(cart)
-  # code here
+  new_hash = {};
+  count = 0;
+  cart.each do |item|
+    item.each do |name, info|
+      if new_hash[name].nil?
+        new_hash[name] = info.merge({:count => 1})
+      else 
+        new_hash[name][:count] += 1
+      end 
+    end 
+  end 
+  new_hash
 end
 
 def apply_coupons(cart, coupons)
