@@ -5,11 +5,11 @@ def consolidate_cart(cart)
     item.each do |name, info|
       if new_hash[name].nil?
         new_hash[name] = info.merge({:count => 1})
-      else 
+      else
         new_hash[name][:count] += 1
-      end 
-    end 
-  end 
+      end
+    end
+  end
   new_hash
 end
 
