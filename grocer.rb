@@ -23,12 +23,12 @@ def apply_coupons(cart, coupons)
       else
         new_hash[`#{name} W/COUPON`] = {:price => coupon[:cost], [:clearance] => info[:clearance], :count => 1}
       end
-    end 
-  end 
-  new_hash[name] = info 
-end 
+    end
+  end
+  new_hash[name] = info
+end
 new_hash
-end 
+end
 
 def apply_clearance(cart)
   # code here
